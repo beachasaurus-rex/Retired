@@ -1,0 +1,6 @@
+D:\My_Data\GithubRepos\Active\PIDController\PIDController.Core\bin\Debug\PIDController.Core.dll
+D:\My_Data\GithubRepos\Active\PIDController\PIDController.Core\bin\Debug\PIDController.Core.pdb
+D:\My_Data\GithubRepos\Active\PIDController\PIDController.Core\obj\Debug\PIDController.Core.csproj.CoreCompileInputs.cache
+D:\My_Data\GithubRepos\Active\PIDController\PIDController.Core\obj\Debug\PIDController.Core.dll
+D:\My_Data\GithubRepos\Active\PIDController\PIDController.Core\obj\Debug\PIDController.Core.pdb
+D:\My_Data\GithubRepos\Active\PIDController\PIDController.Core\obj\Debug\PIDController.Core.csprojAssemblyReference.cache

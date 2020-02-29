@@ -1,0 +1,127 @@
+﻿<Page x:Class="GucciFinances.Views.SettingsPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+      mc:Ignorable="d"
+      Title="Settings">
+    
+    <Grid Margin="20">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+
+        <StackPanel Grid.Column="0">
+            
+            <!-- Database Settings -->
+            <StackPanel>
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="4*"/>
+                        <ColumnDefinition Width="6*"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                    </Grid.RowDefinitions>
+
+                    <!-- Label Column -->
+                    <Label Content="Database Settings"
+                           Grid.Column="0"
+                           Grid.Row="0"
+                           VerticalAlignment="Center"
+                           HorizontalAlignment="Center"
+                           Style="{StaticResource UIHeader}"/>
+                    <Label Content="Account Username"
+                           Grid.Column="0"
+                           Grid.Row="1"
+                           VerticalAlignment="Center"
+                           HorizontalAlignment="Left"
+                           Style="{StaticResource UILabel}"/>
+                    <Label Content="Account Password"
+                           Grid.Column="0"
+                           Grid.Row="2"
+                           VerticalAlignment="Center"
+                           HorizontalAlignment="Left"
+                           Style="{StaticResource UILabel}"/>
+                    <Label Content="Database Name"
+                           Grid.Column="0"
+                           Grid.Row="3"
+                           VerticalAlignment="Center"
+                           HorizontalAlignment="Left"
+                           Style="{StaticResource UILabel}"/>
+                    <Label Content="Port"
+                           Grid.Column="0"
+                           Grid.Row="4"
+                           VerticalAlignment="Center"
+                           HorizontalAlignment="Left"
+                           Style="{StaticResource UILabel}"/>
+                    <Label Content="Server"
+                           Grid.Column="0"
+                           Grid.Row="5"
+                           VerticalAlignment="Center"
+                           HorizontalAlignment="Left"
+                           Style="{StaticResource UILabel}"/>
+
+                    <!-- Settings Values Column -->
+                    <Label Content="Value"
+                           Grid.Column="1"
+                           Grid.Row="0"
+                           VerticalAlignment="Center"
+                           Style="{StaticResource UIHeader}"/>
+                    <TextBox Name="txtbxAccName"
+                             Grid.Column="1"
+                             Grid.Row="1"
+                             VerticalAlignment="Center"
+                             Margin="5"/>
+                    <PasswordBox Name="pwbxAccPw"
+                                 Grid.Column="1"
+                                 Grid.Row="2"
+                                 VerticalAlignment="Center"
+                                 Margin="5"/>
+                    <TextBox Name="txtbxDBName"
+                             Grid.Column="1"
+                             Grid.Row="3"
+                             VerticalAlignment="Center"
+                             Margin="5"/>
+                    <TextBox Name="txtbxPort"
+                             Grid.Column="1"
+                             Grid.Row="4"
+                             VerticalAlignment="Center"
+                             Margin="5"/>
+                    <TextBox Name="txtbxServer"
+                             Grid.Column="1"
+                             Grid.Row="5"
+                             VerticalAlignment="Center"
+                             Margin="5"/>
+
+                    <!-- Double Column Controls -->
+                    <Button Content="Save Database Settings"
+                            Grid.ColumnSpan="2"
+                            Grid.Column="0"
+                            Grid.Row="6"
+                            Command="{Binding SaveDBSettings}"
+                            Style="{StaticResource UIButton}"/>
+                    
+                    <!-- Test Connection Controls -->
+                    <Button Content="Test Connection"
+                            Grid.Column="0"
+                            Grid.Row="7"
+                            Command="{Binding TestDBConnection}"
+                            Style="{StaticResource UIButton}"/>
+                    <Label Name="lblTestDBCon"
+                           Grid.Column="1"
+                           Grid.Row="7"
+                           Style="{StaticResource UILabel}"/>
+                </Grid>
+            </StackPanel>
+        </StackPanel>
+    </Grid>
+</Page>

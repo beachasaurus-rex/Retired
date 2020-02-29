@@ -1,0 +1,5 @@
+D:\My_Data\GithubRepos\MangoConversions\MangoConversions.Units\bin\Debug\MangoConversions.Units.dll
+D:\My_Data\GithubRepos\MangoConversions\MangoConversions.Units\bin\Debug\MangoConversions.Units.pdb
+D:\My_Data\GithubRepos\MangoConversions\MangoConversions.Units\obj\Debug\MangoConversions.Units.csproj.CoreCompileInputs.cache
+D:\My_Data\GithubRepos\MangoConversions\MangoConversions.Units\obj\Debug\MangoConversions.Units.dll
+D:\My_Data\GithubRepos\MangoConversions\MangoConversions.Units\obj\Debug\MangoConversions.Units.pdb

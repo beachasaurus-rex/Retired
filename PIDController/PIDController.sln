@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.168
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PIDController.Core", "PIDController.Core\PIDController.Core.csproj", "{36C4DE97-9324-4F7F-A4E6-58CB55186E80}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PIDController.UnitTests", "PIDController.UnitTests\PIDController.UnitTests.csproj", "{16E37CE1-075C-43A1-8F98-ADF4EF0F7D45}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{36C4DE97-9324-4F7F-A4E6-58CB55186E80}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{36C4DE97-9324-4F7F-A4E6-58CB55186E80}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{36C4DE97-9324-4F7F-A4E6-58CB55186E80}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{36C4DE97-9324-4F7F-A4E6-58CB55186E80}.Release|Any CPU.Build.0 = Release|Any CPU
+		{16E37CE1-075C-43A1-8F98-ADF4EF0F7D45}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{16E37CE1-075C-43A1-8F98-ADF4EF0F7D45}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{16E37CE1-075C-43A1-8F98-ADF4EF0F7D45}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{16E37CE1-075C-43A1-8F98-ADF4EF0F7D45}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {98D7CB41-7C29-4193-84DC-CB028E049EBF}
+	EndGlobalSection
+EndGlobal

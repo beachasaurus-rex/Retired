@@ -1,0 +1,13 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\GucciFinances.Core",
+    "\\GucciFinances.UnitTests",
+    "\\GucciFinances.Validation",
+    "\\GucciFinances.Validation\\Properties",
+    "\\GucciFinances.Validation\\Transporters",
+    "\\GucciFinances.Validation\\Validators"
+  ],
+  "SelectedNode": "\\GucciFinances.Core\\packages",
+  "PreviewInSolutionExplorer": false
+}

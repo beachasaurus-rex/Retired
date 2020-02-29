@@ -1,0 +1,14 @@
+CREATE TABLE `finances`.`transactions` (
+  `ID` INT(10) UNSIGNED NOT NULL,
+  `Merchant` TINYTEXT NOT NULL COMMENT 'The person or entity you paid.',
+  `Amount` DOUBLE NOT NULL COMMENT 'The amount of money that was taken or received.',
+  `IsWork` TINYINT(1) NOT NULL COMMENT 'Denotes if the transaction was work-related.',
+  `TransactionDate` DATE NOT NULL COMMENT 'The date the transaction took place.',
+  `PaymentMethod` TINYTEXT NOT NULL COMMENT 'How the money was exchanged.',
+  `CardName` TINYTEXT NULL COMMENT 'The card name if a card was used.',
+  `IsSubscription` TINYINT(1) NOT NULL COMMENT 'Denotes if the transaction was from a subscription service.',
+  `DocumentFolderPath` LONGTEXT NULL COMMENT 'The folder path where document files are stored.',
+  `Comment` LONGTEXT NULL COMMENT 'Extra information.',
+  PRIMARY KEY (`ID`),
+  UNIQUE INDEX `ID_UNIQUE` (`ID` ASC) VISIBLE)
+COMMENT = 'This table is for storing transactions, such as purchasing items or receiving income from work.';

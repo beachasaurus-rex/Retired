@@ -1,0 +1,139 @@
+﻿<Page x:Class="MangoConversions.UI.Views.ConversionPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:MangoConversions.UI.Views"
+      mc:Ignorable="d">
+
+    <Grid Margin="20">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+
+        <!--Input Unit Conversion Field-->
+        <StackPanel Grid.Column="0"
+                    Grid.Row="0"
+                    Grid.RowSpan="3">
+            <!--Input Header-->
+            <Label Content="Input"
+                   Style="{StaticResource UIHeader}"/>
+
+            <!--Unit System Field-->
+            <Label Content="Unit System"
+                   VerticalAlignment="Center"
+                   HorizontalAlignment="Left"
+                   Style="{StaticResource UILabel}"/>
+            <ComboBox Name="cmboInputSys"
+                      VerticalAlignment="Center"
+                      IsTextSearchEnabled="True"
+                      IsEditable="True"/>
+            
+            <!--Measurement Field-->
+            <Label Content="Measurement"
+                   VerticalAlignment="Center"
+                   HorizontalAlignment="Left"
+                   Style="{StaticResource UILabel}"/>
+            <ComboBox Name="cmboInputMeasure"
+                      VerticalAlignment="Center"
+                      IsTextSearchEnabled="True"
+                      IsEditable="True"/>
+            
+            <!--Unit Field-->
+            <Label Content="Unit"
+                   VerticalAlignment="Center"
+                   HorizontalAlignment="Left"
+                   Style="{StaticResource UILabel}"/>
+            <ComboBox Name="cmboInputUnit"
+                      VerticalAlignment="Center"
+                      IsTextSearchEnabled="True"
+                      IsEditable="True"/>
+            
+            <!--Value Field-->
+            <Label Content="Value"
+                   VerticalAlignment="Center"
+                   HorizontalAlignment="Left"
+                   Style="{StaticResource UILabel}"/>
+            <TextBox Name="txtbxInputValue"
+                     VerticalAlignment="Center"
+                     Height="{Binding Path=Height, ElementName=cmboInputUnit}"
+                     Padding="{Binding Path=Padding, ElementName=cmboInputUnit}"/>
+        </StackPanel>
+        
+        <!--Buttons-->
+        <StackPanel Grid.Column="1"
+                    Grid.Row="1">
+            <Button Name="btnSwap"
+                    Content="Swap Input"
+                    MaxWidth="100"
+                    BorderBrush="Transparent"
+                    FontWeight="Bold"
+                    FontSize="15"
+                    Style="{StaticResource UIButton}"/>
+
+            <Button Name="btnConvert"
+                    Content="Convert"
+                    MaxWidth="100"
+                    BorderBrush="Transparent"
+                    FontWeight="Bold"
+                    FontSize="15"
+                    Style="{StaticResource UIButton}"/>
+        </StackPanel>
+
+        <!--Output Unit Conversion Field-->
+        <StackPanel Grid.Column="2"
+                    Grid.Row="0"
+                    Grid.RowSpan="3">
+            <!--Output Header-->
+            <Label Content="Output"
+                   Style="{StaticResource UIHeader}"/>
+
+            <!--Unit System Field-->
+            <Label Content="Unit System"
+                   VerticalAlignment="Center"
+                   HorizontalAlignment="Left"
+                   Style="{StaticResource UILabel}"/>
+            <ComboBox Name="cmboOutputSys"
+                      VerticalAlignment="Center"
+                      IsTextSearchEnabled="True"
+                      IsEditable="True"/>
+
+            <!--Measurement Field-->
+            <Label Content="Measurement"
+                   VerticalAlignment="Center"
+                   HorizontalAlignment="Left"
+                   Style="{StaticResource UILabel}"/>
+            <ComboBox Name="cmboOutputMeasure"
+                      VerticalAlignment="Center"
+                      IsTextSearchEnabled="True"
+                      IsEditable="True"/>
+
+            <!--Unit Field-->
+            <Label Content="Unit"
+                   VerticalAlignment="Center"
+                   HorizontalAlignment="Left"
+                   Style="{StaticResource UILabel}"/>
+            <ComboBox Name="cmboOutputUnit"
+                      VerticalAlignment="Center"
+                      IsTextSearchEnabled="True"
+                      IsEditable="True"/>
+
+            <!--Value Field-->
+            <Label Content="Value"
+                   VerticalAlignment="Center"
+                   HorizontalAlignment="Left"
+                   Style="{StaticResource UILabel}"/>
+            <TextBox Name="txtbxOutputValue"
+                     VerticalAlignment="Center"
+                     Height="{Binding Path=Height, ElementName=cmboOutputUnit}"
+                     Padding="{Binding Path=Padding, ElementName=cmboOutputUnit}"/>
+        </StackPanel>
+    </Grid>
+</Page>

@@ -1,0 +1,38 @@
+﻿<Page x:Class="GucciFinances.Views.TransactionsPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+      mc:Ignorable="d"
+      Title="TransactionsPage">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="9*"/>
+        </Grid.RowDefinitions>
+        
+        <!-- Actions Menu -->
+        <StackPanel Grid.Row="0"
+                    Orientation="Horizontal">
+            <Button Content="Add"
+                    Command="{Binding DisplayPostForm}"
+                    Style="{StaticResource UIButton}"/>
+            <Button Content="View"
+                    Style="{StaticResource UIButton}"/>
+            <Button Content="Import Data"
+                    Style="{StaticResource UIButton}"/>
+            <Button Content="Export Data"
+                    Style="{StaticResource UIButton}"/>
+        </StackPanel>
+        
+        <Grid Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+
+            <Frame Name="frameForm"
+                   Grid.Column="0"/>
+        </Grid>
+    </Grid>
+</Page>

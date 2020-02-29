@@ -1,0 +1,182 @@
+﻿<Page x:Class="GucciFinances.Views.Forms.PostTransactionForm"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:mop="clr-namespace:GucciFinances.Models.Enums"
+      xmlns:local="clr-namespace:GucciFinances.Views.Forms"
+      mc:Ignorable="d"
+      Title="PostTransactionForm"
+      Margin="20"
+      Background="{StaticResource BackgroundColor}">
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <StackPanel Grid.Column="0">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="3*"/>
+                    <ColumnDefinition Width="6*"/>
+                    <ColumnDefinition Width="1*"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="1*"/>
+                    <RowDefinition Height="1*"/>
+                    <RowDefinition Height="1*"/>
+                    <RowDefinition Height="1*"/>
+                    <RowDefinition Height="1*"/>
+                    <RowDefinition Height="1*"/>
+                    <RowDefinition Height="5*"/>
+                    <RowDefinition Height="1*"/>
+                    <RowDefinition Height="1*"/>
+                </Grid.RowDefinitions>
+
+                <!--Merchant Field-->
+                <Label Grid.Column="0"
+                   Grid.Row="0"
+                   Content="Merchant"
+                   VerticalAlignment="Center"
+                   HorizontalAlignment="Left"
+                   Style="{StaticResource UILabel}"/>
+                <TextBox Grid.Column="1"
+                     Grid.Row="0"
+                     Name="txtbxMerchant"
+                     VerticalAlignment="Center"
+                     Margin="5"/>
+
+                <!--Transaction Amount Field-->
+                <Label Grid.Column="0"
+                   Grid.Row="1"
+                   Content="Transaction Amount"
+                   VerticalAlignment="Center"
+                   HorizontalAlignment="Left"
+                   Style="{StaticResource UILabel}"/>
+                <TextBox Grid.Column="1"
+                     Grid.Row="1"
+                     Name="txtbxAmount"
+                     VerticalAlignment="Center"
+                     Margin="5"/>
+
+                <!--Transaction Date Field-->
+                <Label Grid.Column="0"
+                   Grid.Row="2"
+                   Content="Transaction Date"
+                   VerticalAlignment="Center"
+                   HorizontalAlignment="Left"
+                   Style="{StaticResource UILabel}"/>
+                <DatePicker Grid.Column="1"
+                        Grid.Row="2"
+                        Name="dtpkrDate"
+                        VerticalAlignment="Center"
+                        Margin="5"/>
+
+                <!--Method of Payment Field-->
+                <Label Grid.Column="0"
+                   Grid.Row="3"
+                   Content="Method of Payment"
+                   VerticalAlignment="Center"
+                   HorizontalAlignment="Left"
+                   Style="{StaticResource UILabel}"/>
+                <ComboBox Grid.Column="1"
+                      Grid.Row="3"
+                      VerticalAlignment="Center"
+                      Name="cmboMop"/>
+                
+                <!--Card Name Field-->
+                <Label Grid.Column="0"
+                   Grid.Row="4"
+                   Content="Card Name"
+                   VerticalAlignment="Center"
+                   HorizontalAlignment="Left"
+                   Style="{StaticResource UILabel}"/>
+                <TextBox Grid.Column="1"
+                     Grid.Row="4"
+                     Name="txtbxCardName"
+                     VerticalAlignment="Center"
+                     Margin="5"/>
+                
+                <!--Document Folder Path-->
+                <Label Grid.Column="0"
+                   Grid.Row="5"
+                   Content="Document Folder Path"
+                   VerticalAlignment="Center"
+                   HorizontalAlignment="Left"
+                   Style="{StaticResource UILabel}"/>
+                <TextBox Grid.Column="1"
+                     Grid.Row="5"
+                     Name="txtbxDirPath"
+                     VerticalAlignment="Center"
+                     Margin="5"/>
+                <Button Grid.Column="2"
+                        Grid.Row="5"
+                        Content="Browse..."
+                        VerticalAlignment="Center"
+                        HorizontalAlignment="Left"
+                        Command="{Binding GetDocFolder}"
+                        Style="{StaticResource UIButton}"/>
+                
+                <!--Comment Field-->
+                <Label Grid.Column="0"
+                   Grid.Row="6"
+                   Content="Comment"
+                   VerticalAlignment="Center"
+                   HorizontalAlignment="Left"
+                   Style="{StaticResource UILabel}"/>
+                <TextBox Grid.Column="1"
+                           Grid.Row="6"
+                           Name="txtbxComment"
+                           VerticalAlignment="Stretch"
+                           HorizontalAlignment="Stretch"
+                           Margin="5"/>
+                
+                <!--Checkbox Area-->
+                <Grid Grid.Column="1"
+                      Grid.Row="7">
+
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="1*"/>
+                        <ColumnDefinition Width="1*"/>
+                        <ColumnDefinition Width="1*"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="1*"/>
+                        <RowDefinition Height="1*"/>
+                    </Grid.RowDefinitions>
+
+                    <!--IsWork Field-->
+                    <CheckBox Grid.Column="0"
+                              Grid.Row="0"
+                              Content="Work Related"
+                              Name="chkbxIsWork"
+                              VerticalAlignment="Center"
+                              HorizontalAlignment="Left"
+                              Margin="5"
+                              Style="{StaticResource UICheckbox}"/>
+
+                    <!--IsSubscription Field-->
+                    <CheckBox Grid.Column="0"
+                              Grid.Row="1"
+                              Content="Subscription"
+                              Name="chkbxIsSubscription"
+                              VerticalAlignment="Center"
+                              HorizontalAlignment="Left"
+                              Margin="5"
+                              Style="{StaticResource UICheckbox}"/>
+                </Grid>
+                
+                <!--Post Transaction Button-->
+                <Button Grid.Column="1"
+                        Grid.Row="8"
+                        Content="Post Transaction"
+                        VerticalAlignment="Center"
+                        HorizontalAlignment="Left"
+                        Command="{Binding PostTransaction}"
+                        Style="{StaticResource UIButton}"/>
+            </Grid>
+        </StackPanel>
+    </Grid>
+
+</Page>

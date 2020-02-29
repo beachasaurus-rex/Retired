@@ -1,0 +1,3 @@
+classdef LinearElementTable < ElementTable
+end
+
